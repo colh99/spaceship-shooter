@@ -15,11 +15,28 @@ public class PlayerGameplayHandler : MonoBehaviour
     [SerializeField]
     private bool isInvincible = false;
 
+    // Weapon variables
+    public GameObject standardBolt; // Prefab of the projectile to be fired
+    public Transform projectileSpawnPoint; // The position where the projectile will be spawned
+    public float fireRate = 0.1f; // The rate at which the spaceship can fire (in seconds)
+    private float nextFireTime; // The time when the spaceship can fire next
+
     // Start is called before the first frame update
     void Start()
     {
         hitPoints = maxHitPoints;
     }
+
+
+    void Update()
+    {
+        // Check if the fire button is pressed and if enough time has passed since the last firing
+        if (Input.GetButton("Fire1") && Time.time >= nextFireTime)
+        {
+            firePrimary();
+        }
+    }
+
 
     /// <summary>
     /// Detects all collisions
@@ -61,9 +78,13 @@ public class PlayerGameplayHandler : MonoBehaviour
         isInvincible = false;
     }
 
-    private void shoot()
+    private void firePrimary()
     {
-       
+        // Set the next fire time based on the fire rate
+        nextFireTime = Time.time + fireRate;
+
+        // Spawn the projectile at the spawn point's position and rotation
+        Instantiate(standardBolt, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
     }
 }
 

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// The PlayerController gets input and applies it to the player's movement
+/// The PlayerController handles input relative to the player's movement
 /// </summary>
-public class PlayerController : MonoBehaviour
+public class PlayerMoveController : MonoBehaviour
 {
     [SerializeField]
     private float moveSpeed;
