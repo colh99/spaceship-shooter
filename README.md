@@ -21,7 +21,6 @@ Unity using the C# language for scripting, and all Unity scripts inheret from a 
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
 * More enemy types
 * More weapon types
 * More intentional level design
