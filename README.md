@@ -1,12 +1,14 @@
 # Overview
 
-This is a top-down space ship shooter! Blast your way through enemies for a higher score. The player can move around with WASD, and fire with the spacebar.
+This is a top-down space ship shooter! The player can move around with WASD, and fire with the spacebar.
 
 I made this game to get accustomed to using Unity, so this game is my first experience in the Unity engine.
 
 Note that this repo only contains the scripts.
 
-[](http://youtube.link.goes.here)
+Click below to see it in action!
+
+[Video Demonstration (6/3/2023)](https://youtu.be/eg2mBVA7xHA)
 
 # Development Environment
 
